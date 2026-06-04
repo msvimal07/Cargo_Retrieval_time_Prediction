@@ -34,14 +34,14 @@ BASE_DIR = Path(__file__).parent
 
 @st.cache_resource
 def load_model():
-    model = joblib.load(BASE_DIR / "cargo_retrieval_best_model.pkl")
-    features = joblib.load(BASE_DIR / "cargo_retrieval_features.pkl")
+    model = joblib.load("cargo_retrieval_best_model.pkl")
+    features = joblib.load("cargo_retrieval_features.pkl")
     return model, features
 
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\VimalM\Downloads\warehouse_retrieval_50k_updated.csv")
+    df = pd.read_csv("warehouse_retrieval_50k_updated.csv")
     return df
 
 
